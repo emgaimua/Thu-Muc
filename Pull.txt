@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tinh Tong</title>
+<style type="thuc/<?php  ?>">
+</style>
+</head>
+<body>
+
+	<form action="thuc.php"  name="frm" method="post" ">
+		<input type="text" name="so1" id="text1" />
+		<br/>
+		<input type="text" name="so2" id="text2"/>
+		<br/>
+		<input type="submit" name="sm" value="tinh"/>
+	</form>
+<?php
+$a= $_POST["text1"];
+$b= $_POST["text2"];
+function tinh($a,$b)
+{
+	$c= $a + $b;
+	return $c;
+}
+echo "Ket qua : ".tinh($_POST["text1"],$_POST["text2"]);
+?>
+</body>
+</html>
